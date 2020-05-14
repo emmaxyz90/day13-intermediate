@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	background-color:#cccccc;
+}
+
+h2{
+	font-size: 1.5em;
+	text-align: center;
+	padding: 10px;
+}
+
+#joke{
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #005ce6 ;
+	color: #fff;
+	border: 1px solid black;
+	border-radius: 16px 0 16px 0;
+	width: 60%;
+	font-size: 1.3em;
+}

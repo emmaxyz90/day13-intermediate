@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Showing Random Joke</title>
+<link rel="stylesheet" href="styles.css" type="text/css"/>
+</head>
+<body>
+
+<h2>Random Joke Generator</h2>
+<div id="joke"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+const request = new XMLHttpRequest();
+ 
+request.open('GET', 'https://api.icndb.com/jokes/random');
+request.send(); 
+ 
+request.onload = () => {
+  if (request.status === 200) {
+    console.log("Success"); 
+    
+    //Extracting data
+    var joke = JSON.parse(request.response).value.joke;
+    
+    //Showing the joke in the table
+    document.getElementById("joke").innerHTML = joke;   
+  } 
+};
+ 
+ 
+request.onerror = () => {
+  console.log("error")
+}; 
+
+</script>
+</body>
+</html>
